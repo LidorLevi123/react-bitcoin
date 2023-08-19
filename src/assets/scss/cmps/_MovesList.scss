@@ -1,0 +1,23 @@
+.moves-list {
+    display: grid;
+    row-gap: 1em;
+    border-radius: 10px;
+
+    height: 200px;
+    width: 100%;
+    overflow-y: scroll;
+    background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+    padding: 1em;
+
+    li {
+        display: grid;
+        hr {
+            width: 100%;
+            opacity: 0.5;
+        }
+    }
+
+    h2 {
+        color: red;
+    }
+}

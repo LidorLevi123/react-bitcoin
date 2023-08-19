@@ -1,0 +1,57 @@
+.coin {
+    font-size: 200px;
+    width: 0.1em;
+    height: $coin-dimension;
+    background: $coin-background;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: rotate_4001510 $coin-rotate-speed infinite linear;
+    transform-style: preserve-3d;
+    scale: 0.4;
+
+    .side,
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        width: $coin-dimension;
+        height: $coin-dimension;
+        overflow: hidden;
+        border-radius: 50%;
+        right: -$coin-offset;
+        text-align: center;
+        line-height: 1;
+        transform: rotateY(-90deg);
+        backface-visibility: hidden;
+    }
+
+    .tails,
+    &:after {
+        left: -$coin-offset;
+        transform: rotateY(90deg);
+    }
+
+    &:before,
+    &:after {
+        background: $coin-background;
+        transform: rotateY(90deg);
+    }
+
+    &:after {
+        transform: rotateY(-90deg);
+    }
+}
+
+@keyframes rotate_4001510 {
+    to {
+        transform: rotateY(1turn);
+    }
+}
+
+.svg_back {
+    transform: scaleX(-1);
+}

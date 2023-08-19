@@ -1,0 +1,102 @@
+.home-page {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1em;
+    border-radius: 10px;
+    background: rgba(65, 105, 225, 0.5);
+    border: 1px solid rgba(65, 105, 225, 0.1);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+
+    img {
+        width: 30px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        font-size: 1.5rem;
+        line-height: 0;
+    }
+
+    >* {
+        background: rgba(255, 255, 255, 0.5);
+        padding: 1.5em;
+        border-radius: 10px;
+    }
+
+    >*:first-child {
+
+        display: grid;
+        min-height: 250px;
+
+        > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            align-self: end;
+
+            button {
+                padding: 5px 15px
+            }
+        }
+    }
+
+    >*:nth-child(2) {
+
+        display: grid;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1rem;
+            color: red;
+            align-self: end;
+        }
+
+        .contacts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 140px));
+            gap: 1em;
+            margin-block-start: 1em;
+        }
+
+        article {
+            display: grid;
+            place-items: center;
+            gap: 0.3em;
+            background: linear-gradient(to right, rgb(137, 104, 255), rgb(175, 152, 255));
+            border-radius: 10px;
+            padding-block: 1em;
+            transition: .3s;
+            cursor: pointer;
+
+            .name {
+                color: white;
+            }
+
+            img {
+                width: 60px;
+                border-radius: 50%;
+                border: 1px solid rgb(137, 104, 255);
+            }
+
+            &:hover {
+                scale: 1.03;
+                opacity: 0.9;
+            }
+        }
+    }
+
+    @include for-normal-layout {
+        grid-template-columns: 1fr;
+    }
+}

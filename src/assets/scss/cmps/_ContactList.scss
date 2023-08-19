@@ -1,0 +1,31 @@
+.contact-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 0.5em;
+
+    li {
+        width: 100%;
+        padding-block: 1em;
+        padding-inline: 0.5em;
+
+        border: 1px solid black;
+        border-radius: 1em;
+
+        background-color: #7777;
+        box-shadow: 1px 1px 5px 0px gray;
+        transition: .2s;
+        cursor: pointer;
+
+        &:hover {
+            scale: 1.01;
+            opacity: 0.9;
+            color: blue;
+        }
+
+        @include for-mobile-layout {
+            padding-block: 0.5em;
+            padding-inline-start: 0.25em;
+        }
+    }
+}

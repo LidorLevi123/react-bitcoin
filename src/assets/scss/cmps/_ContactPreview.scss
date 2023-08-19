@@ -1,0 +1,19 @@
+.contact-preview {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 0.5em;
+    grid-template-columns: 75px 1fr;
+    font-size: 1.3rem;
+
+    img {
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 0.1em;
+    }
+
+    @include for-mobile-layout {
+        grid-template-columns: 60px 1fr;
+        font-size: 1.1rem;
+    }
+}

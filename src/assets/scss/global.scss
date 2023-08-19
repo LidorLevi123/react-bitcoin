@@ -1,0 +1,49 @@
+// Externals
+
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+
+// Basics
+@import "basics/typography";
+@import "basics/base";
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/modals";
+@import "basics/animations";
+
+// Pages
+@import "./pages/HomePage";
+@import "./pages/ContactPage";
+@import "./pages/ContactDetails";
+@import "./pages/ContactEdit";
+
+// Components
+@import "./cmps/MovesList";
+@import "./cmps/ContactList";
+@import "./cmps/ContactPreview";
+@import "./cmps/ContactFilter";
+@import "./cmps/UserMsg";
+@import "./cmps/Loader";
+@import "./cmps/Coin";
+@import "./cmps/Chart";
+@import "./cmps/LoginSignup";
+@import "./cmps/TransferFunds";
+@import "./cmps/AppHeader";
+@import "./cmps/AppFooter";
+
+.main-app {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    background-image: url('background.jpg');
+    background-position: center;
+    background-size: cover;
+    
+    main {
+        flex-grow: 1;
+        width: 100%;
+    }
+}

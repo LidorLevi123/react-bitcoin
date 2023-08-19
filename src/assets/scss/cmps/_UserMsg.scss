@@ -1,0 +1,27 @@
+.user-msg {
+    position: fixed;
+    bottom: -10%;
+    right: 15px;
+
+    background-color: #0d72ea;
+    color: white;
+    box-shadow: 1px 1px 3px black;
+
+    font-size: 1.4rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    border-radius: 0.5rem;
+
+    transition: .5s;
+    
+    &.success {
+        background-color: #0d72ea;
+    }
+
+    &.error {
+        background-color: lightcoral;
+    }
+
+    &.active {
+        bottom: 45px;
+    }
+}

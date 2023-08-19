@@ -1,0 +1,46 @@
+.contact-edit {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 1em;
+    form {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-row: 2;
+        row-gap: 0.5em;
+        width: 50%;
+        margin-inline: auto;
+        margin-block-start: 3rem;
+        font-size: 1.5rem;
+
+        label {
+            font-weight: bold;
+        }
+    }
+
+    .actions {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-column: 1 / -1;
+        place-items: center;
+
+        h1 {
+            font-size: 3rem;
+            line-height: 0;
+        }
+
+        img {
+            width: 50px;
+            transition: .2s;
+            cursor: pointer;
+
+            &:hover {
+                scale: 1.05;
+                opacity: 0.9;
+            }
+        }
+
+        > *:last-child {
+            justify-self: end;
+        }
+    }
+}
