@@ -6,7 +6,7 @@ export function AppHeader() {
     return (
         <header className="app-header">
             <section className="container">
-                <h1>Bit<span className='clrd-txt'>coin</span> Wallet</h1>
+            <NavLink className="logo" to="/"><h1>Bit<span className='clrd-txt'>coin</span> Wallet</h1></NavLink>
                 <nav>
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/contact">Contacts</NavLink>
