@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function Loader({ type }) {
+export function Loader() {
 
     return (
         <section className="wifi-loader">

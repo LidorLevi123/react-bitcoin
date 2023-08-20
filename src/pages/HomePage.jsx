@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { contactService } from '../services/contact.service.local'
 import { bitcoinService } from '../services/bitcoin.service'
 import { userActions } from '../store/actions/user.actions'
@@ -7,6 +7,7 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { MovesList } from '../cmps/MovesList'
 import { useSelector } from 'react-redux'
 import { Chart } from '../cmps/Chart'
+import { Loader } from '../cmps/Loader'
 
 export function HomePage() {
 
@@ -61,7 +62,7 @@ export function HomePage() {
         showSuccessMsg('See you soon!')
     }
 
-    if (!user || !topContacts || !chartsData) return
+    if (!user || !topContacts || !chartsData) <Loader />
     return (
         <section className="home-page">
             <div>
@@ -74,8 +75,6 @@ export function HomePage() {
                 </div>
             </div>
             <div>
-                {/* <Link to="/contact"><button className='home-button'>Contacts</button></Link>
-                <Link to="/statistic"><button className='home-button'>Statistics</button></Link> */}
                 <h1>Top 3 contacts recieved coins from you</h1>
                 <section className='contacts'>
                     {
