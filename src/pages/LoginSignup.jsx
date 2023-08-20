@@ -40,6 +40,10 @@ export function LoginSignup({ isSignUp }) {
     async function onSignUp(ev) {
         ev.preventDefault()
         try {
+            if(!userCreds.fullname.length && !userCreds.username.length) {
+                showErrorMsg('Please fill full and user name.')
+                return
+            }
             await userActions.signup(userCreds)
             showSuccessMsg(`Signed up successfully!`)
             navigate('/')
@@ -52,6 +56,10 @@ export function LoginSignup({ isSignUp }) {
     async function onLogin(ev) {
         ev.preventDefault()
         try {
+            if(!userCreds.username.length) {
+                showErrorMsg('Please fill username.')
+                return
+            }
             const user = await userActions.login(userCreds)
             showSuccessMsg(`Welcome back, ${user.fullname}!`)
             navigate('/')

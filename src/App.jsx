@@ -12,6 +12,7 @@ import { ContactEdit } from './pages/ContactEdit'
 import { UserMsg } from './cmps/UserMsg'
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
+import { BackDrop } from './cmps/BackDrop'
 
 function RouteGuard({ children }) {
     const user = userService.getLoggedinUser()
@@ -41,6 +42,7 @@ function App() {
                 </section>
             </Router>
             <UserMsg />
+            <BackDrop />
         </>
     )
 }

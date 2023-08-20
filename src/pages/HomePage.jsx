@@ -95,7 +95,7 @@ export function HomePage() {
                 <MovesList moves={user.moves.slice(0, 3)} />
             </div>
             <div>
-                    <Chart chartsData={chartsData} type={'marketPrice'}/>
+                <Chart chartsData={chartsData} type={'marketPrice'}/>
             </div>
         </section>
     )

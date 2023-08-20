@@ -52,6 +52,7 @@ async function login(userCred) {
 async function signup(userCred) {
     userCred.moves = []
     userCred.balance = 100
+    // userCred.contacts = _createContacts()
     if (!userCred.imgUrl) userCred.imgUrl = 'https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png'
     const user = await storageService.post('user', userCred)
     return saveLocalUser(user)
@@ -77,6 +78,35 @@ function saveLocalUser(user) {
 
 function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER))
+}
+
+function _createContacts() {
+    return [
+        {
+            "_id": "5a56640269f443a5d64b32ca",
+            "name": "Ochoa Hyde",
+            "email": "ochoahyde@renovize.com",
+            "phone": "+1 (968) 593-3824"
+        },
+        {
+            "_id": "5a5664025f6ae9aa24a99fde",
+            "name": "Hallie Mclean",
+            "email": "halliemclean@renovize.com",
+            "phone": "+1 (948) 464-2888"
+        },
+        {
+            "_id": "5a56640252d6acddd183d319",
+            "name": "Parsons Norris",
+            "email": "parsonsnorris@renovize.com",
+            "phone": "+1 (958) 502-3495"
+        },
+        {
+            "_id": "5a566402ed1cf349f0b47b4d",
+            "name": "Rachel Lowe",
+            "email": "rachellowe@renovize.com",
+            "phone": "+1 (911) 475-2312"
+        },
+    ]
 }
 
 // Initial data
