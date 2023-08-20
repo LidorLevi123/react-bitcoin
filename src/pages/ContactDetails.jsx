@@ -72,9 +72,9 @@ export function ContactDetails() {
             {isImgLoaded ?
                 <section className='contact-details'>
                     <section className="actions">
-                        <img src="/back.png" alt="back.png" onClick={onBack} title='Back' />
+                        <img src="back.png" alt="back.png" onClick={onBack} title='Back' />
                         <h1>{contact.name}</h1>
-                        <img src="/edit.png" alt="edit.png" onClick={onEdit} title='Edit' />
+                        <img src="edit.png" alt="edit.png" onClick={onEdit} title='Edit' />
                     </section>
                     <img className='contact-img' src={`https://robohash.org/${contact.name}.png?set=set5`} />
                     <div className='info'>

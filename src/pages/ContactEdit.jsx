@@ -84,12 +84,12 @@ export function ContactEdit() {
     return (
         <section className='contact-edit'>
             <section className="actions">
-                <img src="/back.png" alt="" onClick={onBack} title='Back' />
+                <img src="back.png" alt="" onClick={onBack} title='Back' />
                 <h1>{contact._id ? contactName : 'Add Contact'}</h1>
                 {
                     contact._id ?
-                        <img src="/delete.png" alt="" onClick={onRemoveContact} title='Delete' /> :
-                        <img src="/delete.png" alt="" onClick={onRemoveContact} title='Delete' hidden />
+                        <img src="delete.png" alt="" onClick={onRemoveContact} title='Delete' /> :
+                        <img src="delete.png" alt="" onClick={onRemoveContact} title='Delete' hidden />
                 }
             </section>
             <form onSubmit={onSaveContact} >
