@@ -38,7 +38,7 @@ export function ContactPage() {
             <h1>Contacts</h1>
             <div>
                 <ContactFilter onChangeFilter={onChangeFilter} filterBy={filterBy}/>
-                <Link to="/contact/edit"><button className="nice-button">Add new contact</button></Link>
+                <Link to="/contact/edit" className="nice-button">Add new contact</Link>
             </div>
             <ContactList contacts={contacts} />
         </section>
