@@ -120,17 +120,17 @@
     text-align: center;
     font-size: 18px;
     letter-spacing: 1px;
-    color: #725AC1;
+    color: $clr1;
     background: transparent;
     cursor: pointer;
     transition: ease-out 0.5s;
-    border: 2px solid #725AC1;
+    border: 2px solid $clr1;
     border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #725AC1;
+    box-shadow: inset 0 0 0 0 $clr1;
 
     &:hover {
         color: white;
-        box-shadow: inset 0 -100px 0 0 #725AC1;
+        box-shadow: inset 0 -100px 0 0 $clr1;
         text-decoration: none;
     }
 
@@ -147,16 +147,16 @@
     font-size: 1em;
     z-index: 1;
     color: white;
-    border: 2px solid #0077ff;
+    border: 2px solid $clr2;
     border-radius: 6px;
     position: relative;
-    background: #0077ff;
+    background: $clr2;
     transition: color 0.5s;
 
     &::before {
         position: absolute;
         content: "";
-        background: white;
+        background: $clr5;
         width: 250px;
         height: 300px;
         z-index: -1;

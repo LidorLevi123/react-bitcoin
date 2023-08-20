@@ -6,6 +6,7 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 0.5em;
+    width: 100%;
 
     >*:nth-child(3) {
         align-self: end;

@@ -38,10 +38,11 @@ async function removeContact(contactId) {
     }
 }
 
-async function saveContact(contact) {
+async function saveContact(contactToSave) {
     try {
-        await contactService.save(contact)
-        const type = contact._id ? UPDATE_CONTACT : ADD_CONTACT
+        const contact = await contactService.save(contactToSave)
+        console.log(contact);
+        const type = contactToSave._id ? UPDATE_CONTACT : ADD_CONTACT
         const action = {
             type,
             contact
