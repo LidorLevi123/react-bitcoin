@@ -7,6 +7,6 @@ export function BackDrop() {
     }
 
     return (
-        <section class="backdrop" onClick={onCloseMenu}></section>
+        <section className="backdrop" onClick={onCloseMenu}></section>
     )
 }

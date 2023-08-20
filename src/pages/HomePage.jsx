@@ -62,7 +62,7 @@ export function HomePage() {
         showSuccessMsg('See you soon!')
     }
 
-    if (!user || !topContacts || !chartsData) <Loader />
+    if (!user || !topContacts || !chartsData) return <Loader />
     return (
         <section className="home-page">
             <div>
