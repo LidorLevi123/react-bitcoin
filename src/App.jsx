@@ -4,12 +4,12 @@ import { Navigate, NavLink, Route, HashRouter as Router, Routes } from 'react-ro
 import { userService } from './services/user.service.local'
 
 import { HomePage } from './pages/HomePage'
+import { LoginSignup } from './pages/LoginSignup'
 import { StatisticPage } from './pages/StatisticPage'
 import { ContactPage } from './pages/ContactPage'
 import { ContactDetails } from './pages/ContactDetails'
 import { ContactEdit } from './pages/ContactEdit'
 import { UserMsg } from './cmps/UserMsg'
-import { LoginSignup } from './cmps/LoginSignup'
 import { AppHeader } from './cmps/AppHeader'
 import { AppFooter } from './cmps/AppFooter'
 

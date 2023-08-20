@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Coin } from './Coin'
+import { Coin } from '../cmps/Coin'
 import { Link, useNavigate } from 'react-router-dom'
 import { userActions } from '../store/actions/user.actions'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
